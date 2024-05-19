@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8x1oei0tyxte"]
+[gd_scene load_steps=9 format=3 uid="uid://b8x1oei0tyxte"]
 
 [ext_resource type="Script" path="res://scenes/Menu/Main_Menu.gd" id="1_6vivk"]
 [ext_resource type="Texture2D" uid="uid://b3vq5cp1fr22s" path="res://assets/img/background/background_menu.jpg" id="1_vr2js"]
 [ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="2_5d46i"]
+[ext_resource type="AudioStream" uid="uid://ml4d767ydlmr" path="res://assets/sound/musica.mp3" id="4_7vosx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5ubb"]
 bg_color = Color(0.031087, 0.255825, 0.0776165, 1)
@@ -151,7 +152,7 @@ theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 24
 theme_override_fonts/font = ExtResource("2_5d46i")
 theme_override_font_sizes/font_size = 64
-text = "JAVERUN"
+text = "ESCAPE REAL"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -184,3 +185,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_1cnp5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_mm4en")
 text = "SALIR"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7vosx")
+volume_db = -27.717
