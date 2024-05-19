@@ -1,10 +1,10 @@
 extends Node
 
 #preload obstacles
-var stump_scene = preload("res://scenes/Level 2/barrel.tscn")
-var rock_scene = preload("res://scenes/Level 2/rock.tscn")
-var barrel_scene = preload("res://scenes/Level 2/barrel.tscn")
-var bird_scene = preload("res://scenes/Level 2/bird.tscn")
+var stump_scene = preload("res://scenes/Level 1/barrel.tscn")
+var rock_scene = preload("res://scenes/Level 1/rock.tscn")
+var barrel_scene = preload("res://scenes/Level 1/barrel.tscn")
+var bird_scene = preload("res://scenes/Level 1/bird.tscn")
 var obstacle_types := [stump_scene, rock_scene, barrel_scene]
 var obstacles : Array
 var bird_heights := [200, 390]
@@ -13,7 +13,7 @@ var bird_heights := [200, 390]
 const DINO_START_POS := Vector2i(150, 485)
 const CAM_START_POS := Vector2i(576, 324)
 var difficulty
-const MAX_DIFFICULTY : int = 2
+const MAX_DIFFICULTY : int = 4
 var score : int
 const SCORE_MODIFIER : int = 10
 var high_score : int

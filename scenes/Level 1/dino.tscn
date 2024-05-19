@@ -160,7 +160,7 @@ script = ExtResource("1_1stpw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_6wmvf")
-animation = &"run"
+animation = &"jump"
 autoplay = "idle"
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
@@ -173,4 +173,4 @@ shape = SubResource("RectangleShape2D_t1b5m")
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_60go1")
-volume_db = -25.0
+volume_db = -39.419
