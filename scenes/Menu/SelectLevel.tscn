@@ -51,6 +51,10 @@ alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level 1"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.756863, 0.588235, 0.156863, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
 theme_override_fonts/font = ExtResource("2_o68hn")
 theme_override_font_sizes/font_size = 40
 text = "LEVEL 1"
@@ -75,6 +79,9 @@ alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level 2"]
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
 theme_override_fonts/font = ExtResource("2_o68hn")
 theme_override_font_sizes/font_size = 40
 text = "LEVEL 2"
