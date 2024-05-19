@@ -1,0 +1,95 @@
+[gd_scene load_steps=6 format=3 uid="uid://ei26eqbgs6wy"]
+
+[ext_resource type="Texture2D" uid="uid://1qshc1pvx68w" path="res://assets/img/background/levels.png" id="1_nd8yb"]
+[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="2_o68hn"]
+[ext_resource type="Texture2D" uid="uid://cl7004j8mn4ba" path="res://assets/img/background/level1.png" id="3_2qqsq"]
+[ext_resource type="Texture2D" uid="uid://blwcns4gni27t" path="res://assets/img/background/level2.png" id="3_lid6s"]
+[ext_resource type="Script" path="res://scenes/Menu/SelectLevel.gd" id="4_o8ggu"]
+
+[node name="SelectLevel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nd8yb")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -138.0
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 300
+alignment = 1
+
+[node name="Level 1" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level 1"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_o68hn")
+theme_override_font_sizes/font_size = 40
+text = "LEVEL 1"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/Level 1"]
+layout_mode = 2
+
+[node name="Level1" type="Button" parent="MarginContainer/HBoxContainer/Level 1/Control"]
+layout_mode = 2
+offset_left = -100.0
+offset_top = 4.0
+offset_right = 1829.0
+offset_bottom = 1092.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/icon_hover_color = Color(0.389287, 0.389287, 0.389287, 1)
+icon = ExtResource("3_2qqsq")
+
+[node name="Level 2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Level 2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_o68hn")
+theme_override_font_sizes/font_size = 40
+text = "LEVEL 2"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer/Level 2"]
+layout_mode = 2
+
+[node name="Level2" type="Button" parent="MarginContainer/HBoxContainer/Level 2/Control"]
+layout_mode = 0
+offset_left = -100.0
+offset_top = 4.0
+offset_right = 1829.0
+offset_bottom = 1092.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/icon_hover_color = Color(0.388235, 0.388235, 0.388235, 1)
+icon = ExtResource("3_lid6s")
+script = ExtResource("4_o8ggu")

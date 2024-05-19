@@ -1,0 +1,186 @@
+[gd_scene load_steps=8 format=3 uid="uid://b8x1oei0tyxte"]
+
+[ext_resource type="Script" path="res://scenes/Menu/Main_Menu.gd" id="1_6vivk"]
+[ext_resource type="Texture2D" uid="uid://b3vq5cp1fr22s" path="res://assets/img/background/background_menu.jpg" id="1_vr2js"]
+[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="2_5d46i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5ubb"]
+bg_color = Color(0.031087, 0.255825, 0.0776165, 1)
+corner_radius_top_left = 8
+corner_radius_bottom_right = 8
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jiskp"]
+bg_color = Color(0, 0.682353, 0.713726, 1)
+corner_radius_top_left = 8
+corner_radius_bottom_right = 8
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1cnp5"]
+bg_color = Color(0.348902, 0, 0.0663662, 1)
+corner_radius_top_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mm4en"]
+bg_color = Color(0.835718, 3.22476e-06, 7.70092e-07, 1)
+corner_radius_top_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6vivk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vr2js")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Juan" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 120
+alignment = 2
+
+[node name="Seperator" type="Control" parent="MarginContainer/Juan"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Juan"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_5d46i")
+theme_override_font_sizes/font_size = 24
+text = "JUAN MIGUEL"
+vertical_alignment = 1
+
+[node name="Rafa" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 120
+alignment = 2
+
+[node name="Seperator" type="Control" parent="MarginContainer/Rafa"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Rafa"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_5d46i")
+theme_override_font_sizes/font_size = 24
+text = "RAFAEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Moha" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 120
+alignment = 2
+
+[node name="Seperator" type="Control" parent="MarginContainer/Moha"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Moha"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_5d46i")
+theme_override_font_sizes/font_size = 24
+text = "MOHAMAD"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 120
+
+[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 24
+theme_override_fonts/font = ExtResource("2_5d46i")
+theme_override_font_sizes/font_size = 64
+text = "JAVERUN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Seperator" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5d46i")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_a5ubb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jiskp")
+text = "JUGAR"
+
+[node name="Leave" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5d46i")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_1cnp5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mm4en")
+text = "SALIR"
