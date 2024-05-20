@@ -1,18 +1,14 @@
 class_name MainMenu
 extends Control
 
-@onready var play = $MarginContainer/HBoxContainer/VBoxContainer/Play as Button
-@onready var leave = $MarginContainer/HBoxContainer/VBoxContainer/Leave as Button
-@onready var start_level = preload("res://scenes/Menu/SelectLevel.tscn") as PackedScene
 @onready var audio_stream_player = $AudioStreamPlayer
 
 func _ready():
-	play.button_down.connect(on_start_pressed)
-	leave.button_down.connect(on_exit_pressed)
 	audio_stream_player.play()
-	
-func on_start_pressed() -> void:
-	get_tree().change_scene_to_packed(start_level)
 
-func on_exit_pressed() -> void:
+func _on_play_pressed():
+	get_tree().change_scene_to_file("res://scenes/Menu/SelectLevel.tscn")
+
+
+func _on_leave_pressed():
 	get_tree().quit()

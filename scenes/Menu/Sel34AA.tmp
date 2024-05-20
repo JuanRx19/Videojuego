@@ -88,6 +88,10 @@ theme_override_font_sizes/font_size = 40
 text = "LEVEL 2"
 horizontal_alignment = 1
 
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/Level 2"]
+layout_mode = 2
+text = "SALIRRRRRRRRR"
+
 [node name="Control" type="Control" parent="MarginContainer/HBoxContainer/Level 2"]
 layout_mode = 2
 
@@ -100,6 +104,3 @@ offset_bottom = 1092.0
 scale = Vector2(0.2, 0.2)
 theme_override_colors/icon_hover_color = Color(0.388235, 0.388235, 0.388235, 1)
 icon = ExtResource("3_lid6s")
-
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Level 1/Control/Level1" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Level 2/Control/Level2" to="." method="_on_level_2_pressed"]

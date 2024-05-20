@@ -1,10 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://ei26eqbgs6wy"]
+[gd_scene load_steps=7 format=3 uid="uid://ei26eqbgs6wy"]
 
 [ext_resource type="Texture2D" uid="uid://1qshc1pvx68w" path="res://assets/img/background/levels.png" id="1_nd8yb"]
 [ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="2_o68hn"]
 [ext_resource type="Texture2D" uid="uid://cl7004j8mn4ba" path="res://assets/img/background/level1.png" id="3_2qqsq"]
 [ext_resource type="Texture2D" uid="uid://blwcns4gni27t" path="res://assets/img/background/level2.png" id="3_lid6s"]
 [ext_resource type="Script" path="res://scenes/Menu/SelectLevel.gd" id="4_o8ggu"]
+
+[sub_resource type="GDScript" id="GDScript_s2ghg"]
+script/source = "class_name SelectLevel
+extends Control
+
+@onready var Level1 = $\"../../../Level 1/Control/Level1\" as Button
+@onready var Level2 = $\".\" as Button
+@onready var start_level = preload(\"res://scenes/Level 1/main_level1.tscn\") as PackedScene
+@onready var start_level2 = preload(\"res://scenes/Level 2/main_level2.tscn\") as PackedScene
+
+func _ready():
+	Level1.button_down.connect(on_start_pressed)
+	Level2.button_down.connect(on_exit_pressed)
+	
+func on_start_pressed() -> void:
+	get_tree().change_scene_to_packed(start_level)
+
+func on_exit_pressed() -> void:
+	get_tree().change_scene_to_packed(start_level2)
+"
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
@@ -100,6 +120,4 @@ offset_bottom = 1092.0
 scale = Vector2(0.2, 0.2)
 theme_override_colors/icon_hover_color = Color(0.388235, 0.388235, 0.388235, 1)
 icon = ExtResource("3_lid6s")
-
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Level 1/Control/Level1" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Level 2/Control/Level2" to="." method="_on_level_2_pressed"]
+script = SubResource("GDScript_s2ghg")

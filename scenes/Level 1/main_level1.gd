@@ -32,7 +32,7 @@ func _ready():
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
 	$GameOver.get_node("Button").pressed.connect(new_game)
 	new_game()
-
+	
 func new_game():
 	#reset variables
 	score = 0
@@ -144,3 +144,6 @@ func game_over():
 	get_tree().paused = true
 	game_running = false
 	$GameOver.show()
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/Menu/Main_Menu.tscn")
