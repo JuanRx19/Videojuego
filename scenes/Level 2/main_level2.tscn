@@ -15,6 +15,7 @@ script = ExtResource("1_dem02")
 [node name="Ground" parent="." instance=ExtResource("3_i65ns")]
 
 [node name="Dino" parent="." instance=ExtResource("4_q08qo")]
+position = Vector2(67, 498)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
