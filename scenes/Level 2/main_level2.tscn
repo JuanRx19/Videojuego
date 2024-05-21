@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/Level 1/main_level1.gd" id="1_dem02"]
 [ext_resource type="PackedScene" uid="uid://bl73jbr2l58ec" path="res://scenes/Level 2/bg.tscn" id="2_0wa0v"]
 [ext_resource type="PackedScene" uid="uid://b41446a6isghf" path="res://scenes/Level 2/ground.tscn" id="3_i65ns"]
-[ext_resource type="PackedScene" uid="uid://bhtein0chknfn" path="res://scenes/Level 1/dino.tscn" id="4_m3xos"]
+[ext_resource type="PackedScene" uid="uid://y1qq4dpr0hw5" path="res://scenes/Level 2/dino.tscn" id="4_q08qo"]
 [ext_resource type="PackedScene" uid="uid://ks6lapdjg1a" path="res://scenes/Level 2/game_over.tscn" id="5_4svfq"]
 [ext_resource type="PackedScene" uid="uid://cbievdkmrcmuf" path="res://scenes/Level 2/hud_level2.tscn" id="6_mcupr"]
 
@@ -14,8 +14,7 @@ script = ExtResource("1_dem02")
 
 [node name="Ground" parent="." instance=ExtResource("3_i65ns")]
 
-[node name="Dino" parent="." instance=ExtResource("4_m3xos")]
-position = Vector2(153, 489)
+[node name="Dino" parent="." instance=ExtResource("4_q08qo")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
