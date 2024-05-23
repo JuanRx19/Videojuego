@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 const GRAVITY : int = 6500
 const JUMP_SPEED : int = -2000
-@onready var jump_sound = $JumpSound
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -14,7 +13,7 @@ func _physics_process(delta):
 			$RunCol.disabled = false
 			if Input.is_action_pressed("ui_accept"):
 				velocity.y = JUMP_SPEED
-				#$JumpSound.play()
+				$JumpSound.play()
 			elif Input.is_action_pressed("ui_down"):
 				$AnimatedSprite2D.play("duck")
 				$RunCol.disabled = true

@@ -1,6 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://lotwuige1aee"]
+[gd_scene load_steps=9 format=3 uid="uid://lotwuige1aee"]
 
 [ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="1_ykggm"]
+
+[sub_resource type="GDScript" id="GDScript_k5s1b"]
+script/source = "extends CanvasLayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_button_2_pressed():
+	get_tree().paused = false
+	get_tree().change_scene_to_file(\"res://scenes/Menu/Main_Menu.tscn\")
+"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtjmy"]
 bg_color = Color(0.172549, 0.564706, 0, 1)
@@ -11,7 +30,17 @@ bg_color = Color(0, 0.682353, 0.713726, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wtbp"]
 bg_color = Color(0.6, 0.52549, 0.937255, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icttn"]
+bg_color = Color(0.346708, 0.067211, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mnhxl"]
+bg_color = Color(0, 0.682353, 0.713726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2cwk"]
+bg_color = Color(0.6, 0.52549, 0.937255, 1)
+
 [node name="GameOver" type="CanvasLayer"]
+script = SubResource("GDScript_k5s1b")
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 8
@@ -31,3 +60,24 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_gtjmy")
 theme_override_styles/hover = SubResource("StyleBoxFlat_x2c4s")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7wtbp")
 text = "RESTART"
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = 54.0
+offset_right = 125.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ykggm")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_icttn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mnhxl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f2cwk")
+text = "VOLVER"
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
