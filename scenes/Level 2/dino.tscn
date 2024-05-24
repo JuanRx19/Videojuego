@@ -1,11 +1,16 @@
-[gd_scene load_steps=39 format=3 uid="uid://y1qq4dpr0hw5"]
+[gd_scene load_steps=41 format=3 uid="uid://y1qq4dpr0hw5"]
 
 [ext_resource type="Script" path="res://scenes/Level 1/dino.gd" id="1_80y77"]
 [ext_resource type="Texture2D" uid="uid://dohcl77488v4n" path="res://assets/img/Wizard/Hurt.png" id="2_3xqq7"]
+[ext_resource type="Texture2D" uid="uid://cfl72p60hjxbo" path="res://assets/img/Wizard/Dead.png" id="2_pj4e7"]
 [ext_resource type="Texture2D" uid="uid://c6plnaradjxw1" path="res://assets/img/Wizard/Idle.png" id="3_j5y6s"]
 [ext_resource type="AudioStream" uid="uid://dscpg6m666dta" path="res://assets/sound/jump.wav" id="3_jmtou"]
 [ext_resource type="Texture2D" uid="uid://bk81go464xa7t" path="res://assets/img/Wizard/Jump.png" id="4_xntgi"]
 [ext_resource type="Texture2D" uid="uid://b6jrtuotj6xyv" path="res://assets/img/Wizard/Run.png" id="5_f1wrr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlebw"]
+atlas = ExtResource("2_pj4e7")
+region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b02e3"]
 atlas = ExtResource("2_3xqq7")
@@ -125,6 +130,14 @@ region = Rect2(896, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6wmvf"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlebw")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_b02e3")
@@ -249,7 +262,7 @@ texture_filter = 1
 position = Vector2(-0.75, -7.875)
 scale = Vector2(0.247147, 0.247147)
 sprite_frames = SubResource("SpriteFrames_6wmvf")
-animation = &"duck"
+animation = &"dead"
 autoplay = "idle"
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
@@ -262,4 +275,4 @@ shape = SubResource("RectangleShape2D_t1b5m")
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jmtou")
-volume_db = -25.0
+volume_db = -39.419

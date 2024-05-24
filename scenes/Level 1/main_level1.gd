@@ -140,6 +140,7 @@ func adjust_difficulty():
 		difficulty = MAX_DIFFICULTY
 
 func game_over():
+	$Dino/AnimatedSprite2D.play("dead")
 	check_high_score()
 	get_tree().paused = true
 	game_running = false
