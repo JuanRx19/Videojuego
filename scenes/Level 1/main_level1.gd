@@ -20,7 +20,7 @@ var high_score : int
 var speed : float
 const START_SPEED : float = 5.0
 const MAX_SPEED : int = 20
-const SPEED_MODIFIER : int = 5000
+const SPEED_MODIFIER : int = 2000
 var screen_size : Vector2i
 var ground_height : int
 var game_running : bool

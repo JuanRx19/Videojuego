@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b2nmr8nt3isim" path="res://assets/img/Swordsman/Jump.png" id="4_s2kyo"]
 [ext_resource type="Texture2D" uid="uid://bd3jc0rbx5beh" path="res://assets/img/Swordsman/Run.png" id="5_x202q"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uo6q1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6b38"]
 atlas = ExtResource("2_11hau")
 region = Rect2(256, 0, 128, 128)
 
@@ -124,7 +124,7 @@ region = Rect2(896, 0, 128, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uo6q1")
+"texture": SubResource("AtlasTexture_w6b38")
 }],
 "loop": true,
 "name": &"dead",
@@ -250,7 +250,6 @@ scale = Vector2(0.219971, 0.219971)
 sprite_frames = SubResource("SpriteFrames_6wmvf")
 animation = &"dead"
 autoplay = "idle"
-frame_progress = 0.417798
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)
