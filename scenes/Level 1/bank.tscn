@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ta0webu32dxh"]
+
+[ext_resource type="Texture2D" uid="uid://d4baklmu6vx17" path="res://assets/img/obstacles/bank.png" id="1_57msp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfwml"]
+size = Vector2(123, 82)
+
+[node name="bank" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-6.62502, -1)
+scale = Vector2(0.212859, 0.220657)
+texture = ExtResource("1_57msp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6.5, 0)
+shape = SubResource("RectangleShape2D_tfwml")

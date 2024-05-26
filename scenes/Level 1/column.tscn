@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://btdxpemlmwebw"]
+
+[ext_resource type="Texture2D" uid="uid://0g7i815yydvu" path="res://assets/img/obstacles/column.png" id="1_fsqyq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4glbf"]
+size = Vector2(63, 101)
+
+[node name="column" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, 12)
+scale = Vector2(0.246667, 0.281389)
+texture = ExtResource("1_fsqyq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 11)
+shape = SubResource("RectangleShape2D_4glbf")

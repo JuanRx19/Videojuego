@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dkeqa0apb3a30"]
 
-[ext_resource type="Script" path="res://scenes/Level 1/main_level1.gd" id="1_dem02"]
+[ext_resource type="Script" path="res://scenes/Level 2/main_level2.gd" id="1_857lt"]
 [ext_resource type="PackedScene" uid="uid://bl73jbr2l58ec" path="res://scenes/Level 2/bg.tscn" id="2_0wa0v"]
 [ext_resource type="PackedScene" uid="uid://b41446a6isghf" path="res://scenes/Level 2/ground.tscn" id="3_i65ns"]
 [ext_resource type="PackedScene" uid="uid://y1qq4dpr0hw5" path="res://scenes/Level 2/dino.tscn" id="4_q08qo"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cbievdkmrcmuf" path="res://scenes/Level 2/hud_level2.tscn" id="6_mcupr"]
 
 [node name="Main" type="Node"]
-script = ExtResource("1_dem02")
+script = ExtResource("1_857lt")
 
 [node name="Bg" parent="." instance=ExtResource("2_0wa0v")]
 

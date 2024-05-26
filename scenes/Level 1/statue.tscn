@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c65cw8m63e11s"]
+
+[ext_resource type="Texture2D" uid="uid://o68s8pjg4kdu" path="res://assets/img/obstacles/Remove-bg.ai_1716698089347.png" id="1_t4b1b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4tglf"]
+radius = 50.0
+height = 128.0
+
+[node name="Statue" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.999999, 1)
+scale = Vector2(0.135475, 0.09375)
+texture = ExtResource("1_t4b1b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 1)
+shape = SubResource("CapsuleShape2D_4tglf")
