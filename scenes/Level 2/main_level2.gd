@@ -1,11 +1,11 @@
 extends Node
 
 #preload obstacles
-var stump_scene = preload("res://scenes/Level 2/barrel.tscn")
+var stump_scene = preload("res://scenes/Level 2/stump.tscn")
 var rock_scene = preload("res://scenes/Level 2/rock.tscn")
-var barrel_scene = preload("res://scenes/Level 2/barrel.tscn")
+var font_scene = preload("res://scenes/Level 2/font.tscn")
 var bird_scene = preload("res://scenes/Level 2/bird.tscn")
-var obstacle_types := [stump_scene, rock_scene, barrel_scene]
+var obstacle_types := [stump_scene, rock_scene, font_scene]
 var obstacles : Array
 var bird_heights := [200, 390]
 
