@@ -68,6 +68,6 @@ theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
 theme_override_fonts/font = ExtResource("1_xds28")
 theme_override_font_sizes/font_size = 40
-text = "Level 2"
+text = "Nivel 2"
 horizontal_alignment = 1
 vertical_alignment = 1
