@@ -10,7 +10,7 @@ var obstacles : Array
 var bird_heights := [200, 390]
 
 #game variables
-const DINO_START_POS := Vector2i(150, 485)
+const explorer_START_POS := Vector2i(150, 485)
 const CAM_START_POS := Vector2i(576, 324)
 var difficulty
 const MAX_DIFFICULTY : int = 2
@@ -20,7 +20,7 @@ var high_score : int
 var speed : float
 const START_SPEED : float = 5.0
 const MAX_SPEED : int = 20
-const SPEED_MODIFIER : int = 800
+const SPEED_MODIFIER : int = 500
 var screen_size : Vector2i
 var ground_height : int
 var game_running : bool
@@ -47,8 +47,8 @@ func new_game():
 	obstacles.clear()
 	
 	#reset the nodes
-	$Dino.position = DINO_START_POS
-	$Dino.velocity = Vector2i(0, 0)
+	$explorer.position = explorer_START_POS
+	$explorer.velocity = Vector2i(0, 0)
 	$Camera2D.position = CAM_START_POS
 	$Ground.position = Vector2i(0, 0)
 	
@@ -68,8 +68,8 @@ func _process(delta):
 		#generate obstacles
 		generate_obs()
 		
-		#move dino and camera
-		$Dino.position.x += speed
+		#move explorer and camera
+		$explorer.position.x += speed
 		$Camera2D.position.x += speed
 		
 		#update score
@@ -123,7 +123,7 @@ func remove_obs(obs):
 	obstacles.erase(obs)
 	
 func hit_obs(body):
-	if body.name == "Dino":
+	if body.name == "explorer":
 		game_over()
 
 func show_score():
@@ -140,7 +140,7 @@ func adjust_difficulty():
 		difficulty = MAX_DIFFICULTY
 
 func game_over():
-	$Dino/AnimatedSprite2D.play("dead")
+	$explorer/AnimatedSprite2D.play("dead")
 	check_high_score()
 	get_tree().paused = true
 	game_running = false

@@ -1,6 +1,6 @@
 [gd_scene load_steps=39 format=3 uid="uid://bhtein0chknfn"]
 
-[ext_resource type="Script" path="res://scenes/Level 1/dino.gd" id="1_1stpw"]
+[ext_resource type="Script" path="res://scenes/Level 1/explorer.gd" id="1_1stpw"]
 [ext_resource type="Texture2D" uid="uid://dwo5thtpm5ly5" path="res://assets/img/Swordsman/Dead.png" id="2_11hau"]
 [ext_resource type="AudioStream" uid="uid://dscpg6m666dta" path="res://assets/sound/jump.wav" id="2_60go1"]
 [ext_resource type="Texture2D" uid="uid://3loylg8gojr3" path="res://assets/img/Swordsman/Hurt.png" id="2_cg4bn"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=41 format=3 uid="uid://y1qq4dpr0hw5"]
 
-[ext_resource type="Script" path="res://scenes/Level 1/dino.gd" id="1_80y77"]
+[ext_resource type="Script" path="res://scenes/Level 1/explorer.gd" id="1_80y77"]
 [ext_resource type="Texture2D" uid="uid://dohcl77488v4n" path="res://assets/img/Wizard/Hurt.png" id="2_3xqq7"]
 [ext_resource type="Texture2D" uid="uid://cfl72p60hjxbo" path="res://assets/img/Wizard/Dead.png" id="2_pj4e7"]
 [ext_resource type="Texture2D" uid="uid://c6plnaradjxw1" path="res://assets/img/Wizard/Idle.png" id="3_j5y6s"]
