@@ -80,7 +80,7 @@ theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
 theme_override_fonts/font = ExtResource("2_o68hn")
 theme_override_font_sizes/font_size = 40
-text = "LEVEL 1"
+text = "NIVEL 1"
 horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="MarginContainer/HBoxContainer/Level 1"]
@@ -108,7 +108,7 @@ theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
 theme_override_fonts/font = ExtResource("2_o68hn")
 theme_override_font_sizes/font_size = 40
-text = "LEVEL 2"
+text = "NIVEL 2"
 horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="MarginContainer/HBoxContainer/Level 2"]
