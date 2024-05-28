@@ -13,14 +13,14 @@ var bird_heights := [200, 390]
 const DINO_START_POS := Vector2i(150, 485)
 const CAM_START_POS := Vector2i(576, 324)
 var difficulty
-const MAX_DIFFICULTY : int = 4
+const MAX_DIFFICULTY : int = 2
 var score : int
 const SCORE_MODIFIER : int = 10
 var high_score : int
 var speed : float
 const START_SPEED : float = 5.0
 const MAX_SPEED : int = 20
-const SPEED_MODIFIER : int = 2000
+const SPEED_MODIFIER : int = 500
 var screen_size : Vector2i
 var ground_height : int
 var game_running : bool
